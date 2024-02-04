@@ -1,0 +1,13 @@
+h1 {
+    color: darkslateblue;
+    text-align: left;
+}
+
+header, footer{
+    background-color: darkblue;
+    padding: 0;
+}
+
+footer{
+
+}
