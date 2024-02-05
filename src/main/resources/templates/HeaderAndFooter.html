@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{static/css/style.css}">
+    <link rel="stylesheet" th:href="@{static/css/header.css}">
+    <link rel="stylesheet" th:href="@{static/css/footer.css}">
+    <title>HeaderAndFooter</title>
+</head>
+<body>
+<header th:fragment="Header">
+    <h1>Sahil's Online Shop 2024</h1>
+    <nav>
+        <ul>
+            <li><a href="Index.html">Home Page |</a></li>
+            <li><a href="product.html">Product |</a></li>
+            <li><a href="shopping.html">Shopping |</a></li>
+            <li><a href="checkout.html">Checkout |</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+some text
+</main>
+<footer th:fragment="Footer">
+    Sheridan College&nbsp;&nbsp;
+    <span class="copyright">Copyright © Sahil Dutta <b> ID: 991684086 </b> </span>
+</footer>
+</body>
+</html>

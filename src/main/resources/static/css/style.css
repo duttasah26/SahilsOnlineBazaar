@@ -1,13 +1,31 @@
-h1 {
-    color: darkslateblue;
+
+main{
+    padding-top: 60px;
+    padding-left: 1em;
+}
+
+body{
+    padding-left: 1em;
+    font-family: sans-serif;
+}
+
+nav ul {
+    list-style: none;
     text-align: left;
+    padding-left: 0em;
+    padding-bottom: 0em;
+}
+nav ul li {
+    padding-top: 0em;
+    display: inline;
+}
+nav ul li a {
+    font-size: medium;
+    color: dimgray;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-header, footer{
-    background-color: darkblue;
-    padding: 0;
-}
-
-footer{
-
+.text{
+    margin-top: 50px;
 }
