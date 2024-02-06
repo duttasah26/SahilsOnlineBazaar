@@ -4,3 +4,10 @@ CREATE TABLE Product
     NAME  VARCHAR(255),
     PRICE LONG
 );
+
+CREATE TABLE ShoppingCart
+(
+    ID    LONG PRIMARY KEY,
+    NAME  VARCHAR(255),
+    PRICE LONG
+);

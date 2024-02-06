@@ -25,6 +25,7 @@
             <td th:text="${p.price}"></td>
         </tr>
     </table>
+    <br><br><br>
     <form method="post" action="#" th:action="@{/product}" th:object="${product}">
         Enter Product Id: <input type="text" th:value="*{id}" readonly/>
         <br><br>

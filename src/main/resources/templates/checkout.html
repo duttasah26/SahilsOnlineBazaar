@@ -1,10 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/style.css" th:href="@{css/style.css}">
+    <link rel="stylesheet" href="../static/css/header.css" th:href="@{css/header.css}">
+    <link rel="stylesheet" href="../static/css/footer.css" th:href="@{css/footer.css}">
     <title>Checkout</title>
 </head>
 <body>
-
+<header th:replace="~{HeaderAndFooter::Header}">
+    <h1>header text</h1>
+</header>
+<main>
+    <h2> Checkout Page</h2>
+    <table th:if="${productList != null && productList != ''}">
+        <tr>
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>Product Price</th>
+            <th>Action</th>
+        </tr>
+        <tr th:each="p : ${productList}">
+            <td th:text="${p.id}"></td>
+            <td th:text="${p.name}"></td>
+            <td th:text="${p.price}"></td>
+            <td>
+                <img src="/shopping-cart-simple-fill.png" alt="Action Image" style="width:20px; height:20px; cursor:pointer;"/>
+            </td>
+        </tr>
+    </table>
+    <br><br><br><br>
+</main>
+<footer th:replace="~{HeaderAndFooter :: Footer}">
+    footer text
+</footer>
 </body>
 </html>

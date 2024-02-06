@@ -18,7 +18,6 @@ public class ProductController {
     @Autowired
     public ProductController(ProductService productService)
     {
-
         this.productService = productService;
     }
     @GetMapping("/product")
@@ -36,5 +35,6 @@ public class ProductController {
         productService.saveProduct(product);
         return "redirect:/product";
     }
+
 
 }
