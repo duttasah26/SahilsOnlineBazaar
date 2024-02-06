@@ -9,10 +9,18 @@ import lombok.NoArgsConstructor;
 @Entity(name="PRODUCT")
 public class Product {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="ID")
     private Long id;
+
     @Column(name="NAME")
     private String name;
+
     @Column(name="PRICE")
     private Double price;
+
+    public Long getId() {
+        return id;
+    }
+
 }

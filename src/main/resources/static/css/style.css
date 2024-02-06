@@ -5,6 +5,7 @@ main{
 }
 
 body{
+    background-color: blanchedalmond;
     padding-left: 1em;
     font-family: sans-serif;
 }
@@ -27,5 +28,11 @@ nav ul li a {
 }
 
 .text{
-    margin-top: 50px;
+    margin-top: 40px;
+}
+
+table,th,td{
+    margin-top: 10px;
+    border: 1px solid;
+    margin-bottom: 10px;
 }

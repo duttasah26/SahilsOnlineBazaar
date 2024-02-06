@@ -2,19 +2,19 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" th:href="@{/static/css/style.css}">
-    <link rel="stylesheet" th:href="@{/static/css/header.css}">
-    <link rel="stylesheet" th:href="@{/static/css/footer.css}">
+    <link rel="stylesheet" href=../static/css/style.css th:href="@{../static/css/style.css}">
+    <link rel="stylesheet" href="../static/css/header.css" th:href="@{../static/css/header.css}">
+    <link rel="stylesheet" href="../static/css/footer.css" th:href="@{../static/css/footer.css}">
     <title>Home</title>
 </head>
 <body>
-<header th:replace="~{HeaderAndFooter:: Header}">
-    <h1>header text</h1>
+<header th:replace="~{HeaderAndFooter::Header}">
+    header text
 </header>
 <main>
     <h2> Welcome to our online shopping website</h2>
 </main>
-<footer th:replace="~{HeaderAndFooter :: Footer}">
+<footer th:replace="~{HeaderAndFooter::Footer}">
         footer text
     </footer>
 </body>

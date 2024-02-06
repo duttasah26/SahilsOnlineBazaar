@@ -12,7 +12,30 @@
     <h1>header text</h1>
 </header>
 <main>
-    <h2> </h2>
+    <h2> Product List</h2>
+    <table th:if="${productList != null && productList != ''}">
+        <tr>
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>Product Price</th>
+        </tr>
+        <tr th:each="p : ${productList}">
+            <td th:text="${p.id}"></td>
+            <td th:text="${p.name}"></td>
+            <td th:text="${p.price}"></td>
+        </tr>
+    </table>
+    <form method="post" action="#" th:action="@{/addProduct}" th:object="${product}">
+        Enter Product Name: <input type="text" th:field="*{name}"/>
+        <br>
+        <br>
+        Enter Product Price: <input type="text" th:field="*{price}" />
+        <br>
+        <br>
+        <button type="submit"> Add Product </button>
+    </form>
+    
+    
 </main>
 <footer th:replace="~{HeaderAndFooter :: Footer}">
     footer text

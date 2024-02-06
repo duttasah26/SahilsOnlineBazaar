@@ -1,4 +1,6 @@
 CREATE TABLE Product
     {
-    id
+    id LONG PRIMARY KEY,
+    name VARCHAR(255),
+    price LONG
     }

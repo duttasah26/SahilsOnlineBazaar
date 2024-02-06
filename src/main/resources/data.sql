@@ -1,0 +1,1 @@
+INSERT INTO Product VALUES(name,price) VALUES ("Toothpaste",150);
