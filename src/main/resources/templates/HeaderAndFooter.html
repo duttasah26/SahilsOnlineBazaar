@@ -2,9 +2,9 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../static/css/style.css">
-    <link rel="stylesheet" href="../static/css/header.css">
-    <link rel="stylesheet" href="../static/css/footer.css">
+    <link rel="stylesheet" href="#" th:href="@{../static/css/style.css}" />
+    <link rel="stylesheet" href="#" th:href="@{../static/css/header.css}" />
+    <link rel="stylesheet" href="#" th:href="@{../static/css/footer.css}" />
     <title>HeaderAndFooter</title>
 </head>
 <body>
@@ -12,10 +12,10 @@
     <h1>Sahil's Online Shop 2024</h1>
     <nav>
         <ul>
-            <li><a href="Index.html">Home Page |</a></li>
-            <li><a href="product.html">Product |</a></li>
-            <li><a href="shopping.html">Shopping |</a></li>
-            <li><a href="checkout.html">Checkout |</a></li>
+            <li><a th:href="@{/}">Home Page |</a></li>
+            <li><a th:href="@{/product}">Product |</a></li>
+            <li><a th:href="@{/shopping}">Shopping |</a></li>
+            <li><a th:href="@{/checkout}">Checkout |</a></li>
         </ul>
     </nav>
 </header>

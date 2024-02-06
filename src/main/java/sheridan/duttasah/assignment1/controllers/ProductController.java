@@ -14,7 +14,6 @@ import java.util.Optional;
 
 @Controller
 public class ProductController {
-
     private final ProductService productService;
     @Autowired
     public ProductController(ProductService productService)
@@ -24,13 +23,16 @@ public class ProductController {
     }
     @GetMapping("/product")
     public String ProductList(Model model){
+        Product product=new Product();
+        Long id=productService.generateUniqueId();
+        product.setId(id);
         model.addAttribute("productList",productService.listProducts());
-        model.addAttribute("product",new Product());
+        model.addAttribute("product", product);
         return "product";
     }
 
     @PostMapping("/product")
-    public String addProduct(Product product){
+    public String addProduct(Model model,@ModelAttribute Product product){
         productService.saveProduct(product);
         return "redirect:/product";
     }

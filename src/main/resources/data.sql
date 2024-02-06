@@ -1,1 +1,1 @@
-INSERT INTO Product VALUES(name,price) VALUES ("Toothpaste",150);
+INSERT INTO Product VALUES (123456789, 'TEST OBJ', 5689);

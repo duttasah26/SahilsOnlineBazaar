@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
 @Entity(name="PRODUCT")
 public class Product {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="ID")
     private Long id;
 

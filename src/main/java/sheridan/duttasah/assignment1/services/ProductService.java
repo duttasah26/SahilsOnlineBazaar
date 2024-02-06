@@ -18,16 +18,19 @@ public class ProductService {
         this.productRepository = productRepository;
     }
 
-    public List<Product> listProducts() {
+    public Iterable<Product> listProducts() {
         return productRepository.findAll();
     }
 
-    public Long generateUniqueId() {
-        long id = 100000000 + random.nextInt(900000000);
-        return id;
+    public Long generateUniqueId()
+    {
+        long ID;
+        ID = 100000000 + random.nextInt(900000000);
+        return ID;
     }
 
-    public Product saveProduct(Product product) {
+    public Product saveProduct(Product product)
+    {
         if (product.getId() == null)
         {
             product.setId(generateUniqueId());

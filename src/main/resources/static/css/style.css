@@ -36,3 +36,8 @@ table,th,td{
     border: 1px solid;
     margin-bottom: 10px;
 }
+
+button{
+    font-size: large;
+    background-color: greenyellow;
+}
