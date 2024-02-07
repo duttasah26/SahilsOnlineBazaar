@@ -27,6 +27,7 @@ public class ShoppingCartController {
     @GetMapping("/shopping")
     public String shoppingCart(Model model) {
         model.addAttribute("productList",productService.listProducts());
+        model.addAttribute("itemsincart",shoppingCartService.listCart());
         return "shopping";
     }
 
@@ -36,6 +37,7 @@ public class ShoppingCartController {
         ShoppingCart shoppingCart=shoppingCartService.addToCart(id);
         return "redirect:/shopping";
     }
+
 
 
     @GetMapping("/checkout")

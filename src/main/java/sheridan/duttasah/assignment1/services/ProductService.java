@@ -7,6 +7,7 @@ import sheridan.duttasah.assignment1.beans.Product;
 
 import java.util.List;
 import java.util.Random;
+import java.util.ArrayList;
 import java.lang.Iterable;
 @Service
 public class ProductService {
@@ -18,8 +19,11 @@ public class ProductService {
         this.productRepository = productRepository;
     }
 
-    public Iterable<Product> listProducts() {
-        return productRepository.findAll();
+    public List<Product> listProducts() {
+        List<Product> productList = new ArrayList<>();
+        productRepository.findAll().forEach(productList::add);
+        return productList;
+       /* return productRepository.findAll();*/
     }
 
     public Long generateUniqueId()

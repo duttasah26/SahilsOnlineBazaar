@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Random;
 import java.lang.Iterable;
+import java.util.ArrayList;
 
 @Service
 public class ShoppingCartService {
@@ -27,9 +28,11 @@ public class ShoppingCartService {
         this.productRepository=productRepository;
     }
 
-    public Iterable<ShoppingCart> listCart()
+    public List<ShoppingCart> listCart()
     {
-        return shoppingCartRepository.findAll();
+        List<ShoppingCart> cartlist = new ArrayList<>();
+        shoppingCartRepository.findAll().forEach(cartlist::add);
+        return cartlist;
     }
 
 
