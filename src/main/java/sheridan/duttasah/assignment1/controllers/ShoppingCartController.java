@@ -1,25 +1,27 @@
 package sheridan.duttasah.assignment1.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import sheridan.duttasah.assignment1.beans.Product;
+import sheridan.duttasah.assignment1.beans.ShoppingCart;
 import sheridan.duttasah.assignment1.database.ProductRepository;
 import sheridan.duttasah.assignment1.services.ProductService;
+import sheridan.duttasah.assignment1.services.ShoppingCartService;
+
 import java.util.Optional;
 
 @Controller
 public class ShoppingCartController {
     private final ProductService productService;
+    private final ShoppingCartService shoppingCartService;
 
     @Autowired
-    public ShoppingCartController(ProductService productService)
+    public ShoppingCartController(ProductService productService,ShoppingCartService shoppingCartService)
     {
         this.productService = productService;
+        this.shoppingCartService=shoppingCartService;
     }
 
     @GetMapping("/shopping")
@@ -28,8 +30,11 @@ public class ShoppingCartController {
         return "shopping";
     }
 
-    @PostMapping("/shopping")
-    public String AddToCart(Model model){
+    @GetMapping("/shopping/{id}")
+    public String AddToCart(@PathVariable Long id, Model model)
+    {
+        ShoppingCart shoppingCart=shoppingCartService.addToCart(id);
+        //model.addAttribute("cartList",shoppingCartService.listCart());
         return "redirect:/shopping";
     }
 
