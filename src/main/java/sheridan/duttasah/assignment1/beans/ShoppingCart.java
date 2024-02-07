@@ -12,6 +12,10 @@ import lombok.NoArgsConstructor;
 @Table(name="SHOPPINGCART")
 public class ShoppingCart {
     @Id
+    @Column(name="UID")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long uid;
+
     @Column(name="ID")
     private Long id;
 
@@ -21,14 +25,6 @@ public class ShoppingCart {
     @Column(name="PRICE")
     private Double price;
 
-    @Column(name="NOOFITEMS")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer noofitems;
 
-    public Integer getNoofitems() {
-        return noofitems;
-    }
-    public void setNoofitems(Integer noofitems) {
-        this.noofitems = noofitems;
-    }
+
 }

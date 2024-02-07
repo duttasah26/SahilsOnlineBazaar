@@ -18,7 +18,7 @@ public class ShoppingCartController {
     private final ShoppingCartService shoppingCartService;
 
     @Autowired
-    public ShoppingCartController(ProductService productService,ShoppingCartService shoppingCartService)
+    public ShoppingCartController(ProductService productService, ShoppingCartService shoppingCartService)
     {
         this.productService = productService;
         this.shoppingCartService=shoppingCartService;
@@ -36,6 +36,7 @@ public class ShoppingCartController {
         ShoppingCart shoppingCart=shoppingCartService.addToCart(id);
         return "redirect:/shopping";
     }
+
 
     @GetMapping("/checkout")
     public String Checkout(Model model){
