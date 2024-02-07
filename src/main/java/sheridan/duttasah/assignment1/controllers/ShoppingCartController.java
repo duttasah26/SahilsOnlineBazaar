@@ -27,7 +27,7 @@ public class ShoppingCartController {
     @GetMapping("/shopping")
     public String shoppingCart(Model model) {
         model.addAttribute("productList",productService.listProducts());
-        model.addAttribute("itemsincart",shoppingCartService.listCart());
+        model.addAttribute("itemsincart",shoppingCartService.listCart().size());
         return "shopping";
     }
 
