@@ -25,7 +25,10 @@
             <td th:text="${p.name}"></td>
             <td th:text="${p.price}"></td>
             <td>
-                <img th:src="@{/shopping-cart-icon.png}" alt="Action Image" style="width:20px; height:20px; display: block; margin-left: auto; margin-right: auto; cursor:pointer;"/>
+                <a th:href="@{/shopping/{id}(id=${p.id})}">
+                    <img th:src="@{/shopping-cart-icon.png}" alt="Add to Cart"
+                         style="width:20px; height:20px; display: block; margin-left: auto; margin-right: auto; cursor:pointer;"/>
+                </a>
             </td>
         </tr>
     </table>

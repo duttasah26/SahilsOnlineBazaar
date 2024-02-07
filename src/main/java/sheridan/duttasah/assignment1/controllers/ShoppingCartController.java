@@ -34,12 +34,12 @@ public class ShoppingCartController {
     public String AddToCart(@PathVariable Long id, Model model)
     {
         ShoppingCart shoppingCart=shoppingCartService.addToCart(id);
-        //model.addAttribute("cartList",shoppingCartService.listCart());
         return "redirect:/shopping";
     }
 
     @GetMapping("/checkout")
-    public String Checkout(){
+    public String Checkout(Model model){
+        model.addAttribute("cartList",shoppingCartService.listCart());
         return "checkout";
     }
 

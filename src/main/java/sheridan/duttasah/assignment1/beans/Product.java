@@ -17,7 +17,6 @@ public class Product {
 
     @Column(name="PRICE")
     private Double price;
-
     public Long getId() {
         return id;
     }
