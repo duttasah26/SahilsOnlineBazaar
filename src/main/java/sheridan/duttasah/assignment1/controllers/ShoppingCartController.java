@@ -38,13 +38,11 @@ public class ShoppingCartController {
         return "redirect:/shopping";
     }
 
-
-
     @GetMapping("/checkout")
     public String Checkout(Model model){
         model.addAttribute("cartList",shoppingCartService.listCart());
+        model.addAttribute("Total",shoppingCartService.totalprice());
         return "checkout";
     }
-
 
 }

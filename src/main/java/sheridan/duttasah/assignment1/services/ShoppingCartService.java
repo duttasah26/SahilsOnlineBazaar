@@ -20,7 +20,6 @@ public class ShoppingCartService {
     private final ShoppingCartRepository shoppingCartRepository;
     private final ProductRepository productRepository;
 
-
     @Autowired
     public ShoppingCartService(ShoppingCartRepository shoppingCartRepository, ProductRepository productRepository)
     {
@@ -35,17 +34,34 @@ public class ShoppingCartService {
         return cartlist;
     }
 
-
     public ShoppingCart addToCart(Long id)
     {
-
         Product product = productRepository.findById(id).get();
         ShoppingCart shoppingCart = new ShoppingCart();
         shoppingCart.setId(product.getId());
         shoppingCart.setName(product.getName());
         shoppingCart.setPrice(product.getPrice());
         return shoppingCartRepository.save(shoppingCart);
+    }
 
+    public List<Double> totalprice()
+    {
+        List <ShoppingCart> items = listCart();
+        double total=0;
+        double tax=0;
+        double grandTotal=0;
+        if(!items.isEmpty()) {
+            for (ShoppingCart item : items) {
+                total += item.getPrice();
+            }
+            tax = total * 0.13;
+            grandTotal = total + tax;
+        }
+        List<Double> invoice= new ArrayList<>();
+        invoice.add(total);
+        invoice.add(tax);
+        invoice.add(grandTotal);
+        return invoice;
     }
 
 }

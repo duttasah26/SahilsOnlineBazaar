@@ -26,6 +26,21 @@
         </tr>
     </table>
     <br><br><br><br>
+    <table>
+        <th>Subtotal</th>
+        <tr>
+            <td th:text="${Total[0]}"></td>
+        </tr>
+        <th>Sales Tax(13%)</th>
+        <tr>
+            <td th:text="${Total[1]}"></td>
+        </tr>
+        <th>Total</th>
+        <tr>
+            <td th:text="${Total[2]}"></td>
+        </tr>
+    </table>
+    <br><br><br><br>
 </main>
 <footer th:replace="~{HeaderAndFooter :: Footer}">
     footer text
