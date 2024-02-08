@@ -55,6 +55,7 @@ public class ShoppingCartService {
                 total += item.getPrice();
             }
             tax = total * 0.13;
+            tax = Math.round(tax * 100.0) / 100.0;
             grandTotal = total + tax;
         }
         List<Double> invoice= new ArrayList<>();

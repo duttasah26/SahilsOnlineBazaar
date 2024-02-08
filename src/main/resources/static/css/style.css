@@ -7,6 +7,8 @@ body{
     background-color: #e4dcdc;
     padding-left: 1em;
     font-family: sans-serif;
+    padding-bottom: 150px;
+    position: relative;
 }
 
 nav ul {
@@ -33,9 +35,16 @@ nav ul li a {
 }
 
 table,th,td{
+    width:30em;
+    height:1em;
     border: solid;
     margin-bottom: 10px;
     background-color: whitesmoke;
+}
+
+.table2{
+    width:10em;
+    height:1em;
 }
 
 button {
@@ -57,5 +66,10 @@ button {
 
 button:hover {
     background-color: #45a049;
+}
+
+h2{
+    font-family: Arial;
+    font-weight: bolder;
 }
 
