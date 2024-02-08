@@ -25,6 +25,12 @@ public class ShoppingCart {
     @Column(name="PRICE")
     private Double price;
 
+    public ShoppingCart(Long id, String name, Double price) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+    }
+
 
 
 }

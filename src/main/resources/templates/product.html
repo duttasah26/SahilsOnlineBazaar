@@ -29,9 +29,9 @@
     <form method="post" action="#" th:action="@{/product}" th:object="${product}">
         Enter Product Id: <input type="text" th:value="*{id}" readonly/>
         <br><br>
-        Enter Product Name: <input type="text" th:field="*{name}"/>
+        Enter Product Name: <input type="text" th:field="*{name}" required/>
         <br><br>
-        Enter Product Price: <input type="text" th:field="*{price}" />
+        Enter Product Price: <input type="number" th:field="*{price}" step="0.01" required/>
         <br><br>
         <button type="submit"> Add Product </button>
     </form>

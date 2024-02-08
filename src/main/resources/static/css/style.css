@@ -4,12 +4,14 @@ main{
 }
 
 body{
-    background-color: blanchedalmond;
+    background-color: #e4dcdc;
     padding-left: 1em;
     font-family: sans-serif;
 }
 
 nav ul {
+    margin-top: 0;
+    margin-bottom: 0.5em;
     list-style: none;
     text-align: left;
     padding-left: 0em;
@@ -31,12 +33,29 @@ nav ul li a {
 }
 
 table,th,td{
-    margin-top: 10px;
-    border: 1px solid;
+    border: solid;
     margin-bottom: 10px;
+    background-color: whitesmoke;
 }
 
-button{
-    font-size: large;
-    background-color: greenyellow;
+button {
+    font-family: Arial;
+    font-weight: bolder;
+    background-color: yellowgreen;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
+
+button:hover {
+    background-color: #45a049;
+}
+

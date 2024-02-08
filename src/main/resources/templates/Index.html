@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+<div class="overlay">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../static/css/style.css" th:href="@{css/style.css}">
@@ -12,10 +13,10 @@
     header text
 </header>
 <main>
-    <h1> Welcome to our online shopping website</h1>
+    <h1 class="intro"> Welcome to our online shopping website.</h1>
 </main>
 <footer th:replace="~{HeaderAndFooter::Footer}">
         footer text
-    </footer>
+ </footer>
 </body>
 </html>

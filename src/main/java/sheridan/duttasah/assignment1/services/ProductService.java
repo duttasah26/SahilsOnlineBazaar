@@ -16,6 +16,7 @@ public class ProductService {
 
     @Autowired
     public ProductService(ProductRepository productRepository) {
+
         this.productRepository = productRepository;
     }
 
@@ -23,7 +24,6 @@ public class ProductService {
         List<Product> productList = new ArrayList<>();
         productRepository.findAll().forEach(productList::add);
         return productList;
-       /* return productRepository.findAll();*/
     }
 
     public Long generateUniqueId()
